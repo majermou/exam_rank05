@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BrickWall.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:58:50 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 17:00:07 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:20:28 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
     BrickWall();
     ~BrickWall();
 
-    ATarget*    clone();
+    ATarget*    clone() const;
 };
 
 #endif // BRICKWALL_HPP

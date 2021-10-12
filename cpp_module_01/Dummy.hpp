@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fwoosh.hpp                                         :+:      :+:    :+:   */
+/*   Dummy.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 14:52:40 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 14:57:48 by majermou         ###   ########.fr       */
+/*   Created: 2021/10/12 15:01:51 by majermou          #+#    #+#             */
+/*   Updated: 2021/10/12 20:10:23 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FWOOSH_HPP
-#define FWOOSH_HPP
+#ifndef DUMMY_HPP
+#define DUMMY_HPP
 
-#include "ASpell.hpp"
+#include "ATarget.hpp"
 
-class Fwoosh: public ASpell
+class Dummy : public ATarget
 {
 public:
-    Fwoosh();
-    ~Fwoosh();
+    Dummy();
+    ~Dummy();
 
-    ASpell* clone();
+    ATarget*    clone() const;
 };
 
-#endif // FWOOSH_HPP
+#endif // DUMMY_HPP

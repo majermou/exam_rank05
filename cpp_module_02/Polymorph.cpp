@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Polymorph.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:55:41 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 16:57:56 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:17:52 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ Polymorph::~Polymorph() {
 
 }
 
-ASpell* Polymorph::clone() {
+ASpell* Polymorph::clone() const {
     return new Polymorph;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BrickWall.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 17:00:14 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 17:02:00 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:20:35 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ BrickWall::~BrickWall() {
     
 }
 
-ATarget*    BrickWall::clone() {
+ATarget*    BrickWall::clone() const {
     return new BrickWall;
 }

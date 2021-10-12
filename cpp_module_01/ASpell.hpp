@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ASpell.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 14:06:38 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 15:37:54 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 19:59:44 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 
     std::string getName() const;
     std::string getEffects() const;
-    virtual ASpell* clone() = 0;
+    virtual ASpell* clone() const = 0;
     void    launch(const ATarget& target);
 };
 

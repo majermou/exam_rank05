@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fwoosh.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 14:52:40 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 14:57:48 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:16:11 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
     Fwoosh();
     ~Fwoosh();
 
-    ASpell* clone();
+    ASpell* clone() const;
 };
 
 #endif // FWOOSH_HPP

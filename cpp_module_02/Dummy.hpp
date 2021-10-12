@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dummy.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:01:51 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 15:05:15 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:19:56 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
     Dummy();
     ~Dummy();
 
-    ATarget*    clone();
+    ATarget*    clone() const;
 };
 
 #endif // DUMMY_HPP

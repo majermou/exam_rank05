@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fwoosh.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 14:57:58 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 15:01:19 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:16:25 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ Fwoosh::~Fwoosh() {
     
 }
 
-ASpell* Fwoosh::clone() {
+ASpell* Fwoosh::clone() const {
     return new Fwoosh;
 }

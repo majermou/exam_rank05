@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Polymorph.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:54:01 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 16:58:04 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 20:17:57 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
     Polymorph();
     ~Polymorph();
 
-    ASpell* clone();
+    ASpell* clone() const;
 };
 
 #endif  // POLYMORPH_HPP

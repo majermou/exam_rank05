@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dummy.hpp                                          :+:      :+:    :+:   */
+/*   Fwoosh.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 15:01:51 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 15:05:15 by majermou         ###   ########.fr       */
+/*   Created: 2021/10/12 14:57:58 by majermou          #+#    #+#             */
+/*   Updated: 2021/10/12 20:10:33 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DUMMY_HPP
-#define DUMMY_HPP
+#include "Fwoosh.hpp"
 
-#include "ATarget.hpp"
+Fwoosh::Fwoosh(): ASpell("Fwoosh", "fwooshed") {
+    
+}
 
-class Dummy : public ATarget
-{
-public:
-    Dummy();
-    ~Dummy();
+Fwoosh::~Fwoosh() {
+    
+}
 
-    ATarget*    clone();
-};
-
-#endif // DUMMY_HPP
+ASpell* Fwoosh::clone() const {
+    return new Fwoosh;
+}
