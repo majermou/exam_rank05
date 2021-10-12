@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   Warlock.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:41:21 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 16:34:09 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 18:51:55 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Warlock.hpp"
 
 Warlock::Warlock(const std::string _name, const std::string _title): name(_name), title(_title) {
-      std::cout << name << ": This looks like another boring day." << std::endl;
+    std::cout << name << ": This looks like another boring day." << std::endl;
 }
 
 Warlock::Warlock(const Warlock& c): name(c.name), title(c.title) {
-    
+
 }
 
 Warlock&    Warlock::operator=(const Warlock& rOperand) {
@@ -29,7 +29,7 @@ Warlock&    Warlock::operator=(const Warlock& rOperand) {
 }
 
 Warlock::~Warlock() {
-      std::cout << name << ": My job here is done!" << std::endl;
+    std::cout << name << ": My job here is done!" << std::endl;
 }
 
 const std::string&  Warlock::getName() const {
@@ -49,21 +49,13 @@ void    Warlock::introduce() const {
 }
 
 void    Warlock::learnSpell(ASpell* spell) {
-    spells.push_back(spell);
+    spellBook.learnSpell(spell);
 }
 
 void    Warlock::forgetSpell(std::string spellName) {
-    for (std::vector<ASpell*>::iterator it = spells.begin(); it < spells.end(); ++it) {
-        if ((*it)->getName() == spellName) {
-            spells.erase(it);
-        }
-    }
+    spellBook.forgetSpell(spellName);
 }
 
 void    Warlock::launchSpell(std::string spellName, ATarget& target) {
-    for (std::vector<ASpell*>::iterator it = spells.begin(); it < spells.end(); ++it) {
-        if ((*it)->getName() == spellName) {
-            (*it)->launch(target);
-        }
-    }
+    spellBook.createSpell(spellName)->launch(target);
 }

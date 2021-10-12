@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   SpellBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 17:02:53 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 17:50:15 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 19:19:40 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 #define SPELLBOOK_HPP
 
 #include <vector>
-#include <iostream>
-#include "ASpell.hpp"
+#include "Fireball.hpp"
+#include "Fwoosh.hpp"
+#include "Polymorph.hpp"
 
 class SpellBook
 {
@@ -27,9 +28,9 @@ public:
     SpellBook();
     ~SpellBook();
 
-    void    learnSpell(ASpell*); // that COPIES a spell in the book
-    void    forgetSpell(std::string const &); // that deletes a spell from the book, except if it isn't there
-    ASpell* createSpell(std::string const &); // that receives a string corresponding to the name of a spell, creates it, and returns it.
+    void    learnSpell(ASpell* spell);
+    void    forgetSpell(std::string const &);
+    ASpell* createSpell(std::string const &);
 };
 
 #endif // SPELLBOOK_HPP
