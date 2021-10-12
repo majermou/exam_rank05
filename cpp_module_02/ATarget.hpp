@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ATarget.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 14:31:00 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 20:18:38 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 23:22:33 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ protected:
 public:
     ATarget(std::string _attribute);
     ATarget(const ATarget& c);
-    ~ATarget();
+    virtual ~ATarget();
     ATarget&    operator=(const ATarget& rOperand);
 
     const std::string&   getType() const;

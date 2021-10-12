@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ASpell.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 14:21:52 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 18:52:42 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 23:22:06 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ std::string ASpell::getEffects() const {
     return effects;
 }
 
-void    ASpell::launch(const ATarget& target) {
+void    ASpell::launch(const ATarget& target) const {
     target.getHitBySpell(*this);
 }

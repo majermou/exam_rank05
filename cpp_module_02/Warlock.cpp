@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Warlock.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:41:21 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 20:28:48 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 23:30:10 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,7 @@ void    Warlock::forgetSpell(std::string spellName) {
 }
 
 void    Warlock::launchSpell(std::string spellName, ATarget& target) {
-    spellBook.createSpell(spellName)->launch(target);
+    ASpell* createdSpell = spellBook.createSpell(spellName);
+    if (createdSpell)
+        createdSpell->launch(target);
 }

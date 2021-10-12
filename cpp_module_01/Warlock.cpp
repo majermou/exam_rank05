@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Warlock.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 21:41:21 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 20:31:31 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 23:21:12 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,11 @@ void    Warlock::introduce() const {
 }
 
 void    Warlock::learnSpell(ASpell* spell) {
+    for (std::vector<ASpell*>::iterator it = spells.begin(); it < spells.end(); ++it) {
+        if ((*it)->getName() == spell->getName()) {
+            return;
+        }
+    }
     spells.push_back(spell);
 }
 
@@ -56,6 +61,7 @@ void    Warlock::forgetSpell(std::string spellName) {
     for (std::vector<ASpell*>::iterator it = spells.begin(); it < spells.end(); ++it) {
         if ((*it)->getName() == spellName) {
             spells.erase(it);
+            return;
         }
     }
 }
@@ -64,6 +70,7 @@ void    Warlock::launchSpell(std::string spellName, ATarget& target) {
     for (std::vector<ASpell*>::iterator it = spells.begin(); it < spells.end(); ++it) {
         if ((*it)->getName() == spellName) {
             (*it)->launch(target);
+            return;
         }
     }
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   TargetGenerator.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 19:01:34 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 19:28:45 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/12 23:27:12 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ TargetGenerator::~TargetGenerator() {
 }
 
 void        TargetGenerator::learnTargetType(ATarget* target) {
+    for (std::vector<ATarget*>::iterator it = targets.begin(); it < targets.end(); ++it) {
+        if ((*it)->getType() == target->getType()) {
+            return;
+        }
+    } 
     targets.push_back(target);
 }
 
@@ -39,11 +44,12 @@ void        TargetGenerator::forgetTargetType(std::string const& targetType) {
     for (std::vector<ATarget*>::iterator it = targets.begin(); it < targets.end(); ++it) {
         if ((*it)->getType() == targetType) {
             targets.erase(it);
+            return;
         }
     } 
 }
 
-ATarget*    TargetGenerator::createTarget(std::string const& type) {
+ATarget*    TargetGenerator::createTarget(std::string const& type) const {
     if (type == "Inconspicuous Red-brick Wall") {
         BrickWall   brickWall;
         return brickWall.clone();
