@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   SpellBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 17:02:53 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 23:24:02 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/13 09:13:08 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
 
     void    learnSpell(ASpell* spell);
     void    forgetSpell(std::string const &);
-    ASpell* createSpell(std::string const &) const;
+    ASpell* createSpell(std::string const &);
 };
 
 #endif // SPELLBOOK_HPP

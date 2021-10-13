@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   SpellBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 17:40:36 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 23:25:20 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/13 09:13:00 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,11 @@ void   SpellBook::forgetSpell(std::string const & spellName) {
     }
 }
 
-ASpell* SpellBook::createSpell(std::string const &spellName) const {
-    if (spellName == "Fireball") {
-        Fireball    fireball;
-        return fireball.clone();
-    } else if (spellName == "Polymorph") {
-        Polymorph   polymorph;
-        return polymorph.clone();
-    } else if (spellName == "Fwoosh") {
-        Fwoosh  fwoosh;
-        return fwoosh.clone();
+ASpell* SpellBook::createSpell(std::string const &spellName) {
+    for (std::vector<ASpell*>::iterator it = spellBook.begin(); it < spellBook.end(); ++it) {
+        if ((*it)->getName() == spellName) {
+            return (*it)->clone();
+        }
     }
     return NULL;
 }

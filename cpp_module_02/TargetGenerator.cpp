@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   TargetGenerator.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: majermou <majermou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: majermou <majermou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 19:01:34 by majermou          #+#    #+#             */
-/*   Updated: 2021/10/12 23:27:12 by majermou         ###   ########.fr       */
+/*   Updated: 2021/10/13 09:14:28 by majermou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,11 @@ void        TargetGenerator::forgetTargetType(std::string const& targetType) {
     } 
 }
 
-ATarget*    TargetGenerator::createTarget(std::string const& type) const {
-    if (type == "Inconspicuous Red-brick Wall") {
-        BrickWall   brickWall;
-        return brickWall.clone();
-    } else if (type == "Target Practice Dummy") {
-        Dummy   dummy;
-        return dummy.clone();
-    }
+ATarget*    TargetGenerator::createTarget(std::string const& type) {
+    for (std::vector<ATarget*>::iterator it = targets.begin(); it < targets.end(); ++it) {
+        if ((*it)->getType() == type) {
+            return (*it)->clone();
+        }
+    } 
     return NULL;
 }
