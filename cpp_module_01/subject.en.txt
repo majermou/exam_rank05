@@ -69,11 +69,13 @@ Add to the Warlock the following member functions:
 You will need a new attribute to store the spells your Warlock knows. Several
 types fit the bill, it's up to you to choose the best one.
 
+Note that Warlock should not learn a spell more than once.
+
 Below is a possible test main and its expected output:
 
 int main()
 {
-  Warlock richard(Richard, the Titled);
+  Warlock richard("Richard", "the Titled");
 
   Dummy bob;
   Fwoosh* fwoosh = new Fwoosh();
@@ -81,15 +83,15 @@ int main()
   richard.learnSpell(fwoosh);
 
   richard.introduce();
-  richard.launchSpell(Fwoosh, bob);
+  richard.launchSpell("Fwoosh", bob);
 
-  richard.forgetSpell(Fwoosh);
-  richard.launchSpell(Fwoosh, bob);
+  richard.forgetSpell("Fwoosh");
+  richard.launchSpell("Fwoosh", bob);
 }
 
 ~$ ./a.out | cat -e
 Richard: This looks like another boring day.$
-Richard: I am Richard, the Titled$
-Target Practice Dummy has been fwooshed$
-Richard: My job here is done$
+Richard: I am Richard, the Titled!$
+Target Practice Dummy has been fwooshed!$
+Richard: My job here is done!$
 ~$

@@ -51,6 +51,8 @@ It will have the following functions:
 * ATarget* createTarget(string const &), that creates a target of the
   specified type
 
+Note that SpellBook nor TargetGenerator should learn the same thing more than once.
+
 Phew, that's done. Now here's a test main. It's not very thorough, so make sure 
 to use your own aswell.
 
